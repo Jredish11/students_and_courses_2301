@@ -16,4 +16,14 @@ class GradeBook
       course.students
     end.flatten
   end
+
+  def students_below(score)
+    students = @scores.map do |score|
+        score.students
+    end.flatten
+      students.select do |student|
+        student.score == score
+       end
+    
+  end
 end
