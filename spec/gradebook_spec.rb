@@ -40,6 +40,20 @@ RSpec.describe GradeBook do
   end
 
   it 'can return a list of students whose grades are below threshold' do
+    grade_book = GradeBook.new("Mr. Boatwright")
+    student1 = Student.new({name: "Morgan", age: 21})
+    student2 = Student.new({name: "Jordan", age: 29})
+
+    
+    student1.log_score(78)
+
+    expect(student1.scores).to eq([78])
+    
+    student1.student_below(80)
+
+    expect(student1.student_below(score)).to eq([student1])
+
+
 
 
   end
