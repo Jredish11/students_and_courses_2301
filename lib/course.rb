@@ -9,11 +9,15 @@ class Course
   end
 
   def full?
-    @full
+    if @capacity <= students.count
+      true
+    else
+      false
+    end
   end
 
-  def full
-    @full = true
+  def enroll(student)
+    @students << student
   end
 end
 
